@@ -1,0 +1,97 @@
+body{
+font-family:"Arial Black",'Noto Sans JP', sans-serif
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+}
+
+.main-title{
+    display: flex;
+    justify-content: center;
+    h1{
+    font-size: 5em;
+}
+    h2{
+    display: flex;
+    align-items: flex-end;
+}
+
+}
+
+.profile-area img{
+    width: 250px;
+}
+.profile{
+    border:6px solid #070707;
+    border-radius: 10px;
+    box-shadow: 4px 4px;
+    display: inline-flex;
+}
+
+.About{
+    background-color: #F7F5F5;
+    padding-top:30px;
+    padding-bottom:50px;
+    border-radius: 30px;
+    font-family: 'Arial';
+}
+.About img{
+    width: 250px;
+}
+
+.language{
+    background-color: #fff;
+    margin:0 3.5em;
+    border-radius: 15px;
+    padding-top:15px;
+    padding-bottom:10px;
+}
+
+.h2-title{
+        font-size:3.5em;
+        margin-bottom:-28px;
+    }
+.h3-tittle{
+    margin-bottom:-20px ;
+}
+.html{
+    color:#F3642C;
+}
+.css{
+    color:#1572B6;
+}
+.php{
+    color:#777BB3;
+
+}
+.laravel{
+    color:#FF2D20;
+}
+.javascript{
+    color:#E5A228;
+}
+.git{
+    color:#DE5C40;
+}
+.my{
+    color:#5D86A0;
+}
+.sql{
+    color:#F49722;
+}
+
+.work{
+    padding-top:30px;
+    padding-bottom:50px;
+    img{
+        width:400px;
+        border-radius: 10px;
+
+    }
+}
+
+.h2-title-work{
+        font-size:3.5em;
+        margin-top:-40px;
+}

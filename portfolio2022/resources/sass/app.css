@@ -1,0 +1,54 @@
+body {
+  font-family: "Arial Black",'Noto Sans JP', sans-serif;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+
+.main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-title h1 {
+  font-size: 5em;
+}
+
+.main-title h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.profile-area img {
+  width: 250px;
+}
+
+.profile {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: 6px solid #070707;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px;
+          box-shadow: 4px 4px;
+}
+
+.About {
+  background-color: #F7F5F5;
+  margin-top: 3em;
+}
+
+.About h2 {
+  font-size: 3em;
+}
+/*# sourceMappingURL=app.css.map */
