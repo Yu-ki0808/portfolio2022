@@ -16,32 +16,37 @@
         <h2 class="h2-title">About</h2>
         <div class="About fs-4">
             <img src="{{asset('img/portfolio/about.png')}}" alt="Yu-kiについての自己紹介" >
-            <h3 class="h3-tittle">学習言語</h3>
+            <h3 class="h3-tittle fw-bold">学習言語</h3>
             <div class="language">
-            <p><span class="html">HTML</span>/<span class="css">CSS</span>/<span class="php">PHP</span>/<span class="laravel">Laravel</span>/<span class="javascript">JavaScript</span>/<span class="git">Git</span>/<span class="my">My</span><span class="sql">SQL</span></p>
+            <p><span class="html">HTML</span>/<span class="css">CSS</span>/<span class="php">PHP</span>/<span class="laravel">Laravel</span>/<span class="javascript">JavaScript</span>/</p>
+            <p><span class="git">Git</span>/<span class="my">My</span><span class="sql">SQL</span></p>
             </div>
-            <div class="fs-5 mt-3">
-            <p>新聞配達をしながら専門学校で「FP技能士２級」と「日商簿記２級」などを取得。</p>
-            <p>1児のパパで、プログラミングを活用した教育システムを少しずつ作成。</p>
-            <p>趣味は、筋トレやサッカーにゲームにクロスバイクで琵琶湖一周や淡路島一周を実施。</p>
+            <div class="language-sp">
+            <p><span class="html">HTML</span>/<span class="css">CSS</span>/<span class="php">PHP</span>/<span class="laravel">Laravel</span>/<br>
+            <span class="javascript">JavaScript</span>/<span class="git">Git</span>/<span class="my">My</span><span class="sql">SQL</span></p>
+            </div>
+            <div class="fs-5 mt-3 About-description">
+            <p>新聞配達をしながら専門学校で</p><div class="br"></div><p><b>FP技能士２級</b>と<b>日商簿記２級</b>を取得。</p>
+            <p>1児のパパで、プログラミングを活用した</p><div class="br"></div><p>学習サイトを少しずつ作成。</p>
+            <p>趣味は、筋トレやサッカーにゲームに</p><div class="br"></div><p>クロスバイクで琵琶湖、淡路島一周を実施。</p>
         </div>
     </div>
 
         <h2 class="h2-title-work">Work</h2>
-            <div class="work d-flex">
-                <div class="d-flex align-items-center me-5">
+            <div class="work">
+                <div class="work-items align-items-center me-4">
                     <div class="flex-column">
                 <h3 class="fs-1">muscle-quest</h3>
-                <h4>経験値を貯めながら筋トレ実施の累計数やレベルアップで継続を目指す！</h4>
+                <h4>筋トレ実施の累計数や経験値が貯まり、<br>レベルアップで継続を目指す！</h4>
                 </div>
             </div>
                 <img src="{{asset('img/portfolio/oo.png')}}" alt="" class="bg-info">
         </div>
-        <div class="work d-flex flex-row-reverse">
-            <div class="d-flex align-items-center ms-5">
+        <div class="work  flex-row-reverse">
+            <div class="work-items align-items-center ms-4">
                 <div class="flex-column">
                     <h3 class="fs-1">KIDS PIKORI</h3>
-                    <h4>Web端末一台でカンタンにできる子供学習サイト</h4>
+                    <h4>Web端末一台でカンタンにできる<Br>子供学習サイト</h4>
                 </div>
             </div>
             <img src="{{asset('img/portfolio/oo.png')}}" alt="" class="bg-info">
@@ -52,8 +57,10 @@
                 <p>ーお気軽にお問い合わせ下さいー</p>
                 <img src="{{asset('img/portfolio/mail.png')}}" alt="連絡手段の説明-詐欺以外気軽にご連絡ください-" >
                 <div class="mt-5 d-flex justify-content-center">
-                    <a href=""><i class="fa fa-2x fa-twitter me-3" aria-hidden="true" style="color:#00acee;"></i></a>
-                    <a href="mailto:y.tamura2146@gmail.com"><i class="fa fa-2x fa-envelope" aria-hidden="true" style="color:#28AFEA;"></i></a>
+                    <a href="https://twitter.com/yu_ki_info2016"><i class="fa fa-2x fa-twitter me-3" aria-hidden="true" style="color:#00acee;"></i></a>
+                    <a href="mailto:y.tamura2146@gmail.com"><i class="fa fa-2x fa-envelope me-3" aria-hidden="true" style="color:#28AFEA;"></i></a>
+                    {{-- <a href=""><i class="fa fa-2x fa-wpforms" aria-hidden="true"></i></a> --}}
+
                 </div>
             </div>
 </div>

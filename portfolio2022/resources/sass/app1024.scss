@@ -1,0 +1,191 @@
+@media screen and (max-width: 992px) {
+    /* 992px以下に適用されるCSS（タブレット用） */
+
+    .About-description{
+        p{
+            font-size:1rem;
+        }
+    }
+    .work{
+        h4{
+            font-size:1rem;
+        }
+        img{
+            width: 20rem;
+        }
+    }
+    .language{
+            margin: 0 2.5em;
+        p{
+        font-size:1.6rem;
+        }
+    }
+
+    // ---------------------------------------------------muscle-questのCSS---------------------------------------------------
+
+    .pc-main-image{
+        display:none;
+    }
+    .sp-main-image{
+        padding-top:6em;
+        display: block;
+        img{
+            width: 200px;
+        }
+        .row{
+            text-align:center;
+        }
+    }
+    .contents{
+        display:none;
+       }
+    .contents-h2{
+        font-size:3rem;
+        margin-bottom:-1.6rem;
+        text-align: center;
+    }
+    .introduction-h2{
+        font-size:3rem;
+        margin-top:-2.1rem;
+        text-align: center;
+    }
+
+    .sp-contents-image{
+        background-color: aqua;
+        padding:2em 0;
+        display: block;
+        img{
+            width: 200px;
+        }
+        .row{
+            text-align:center;
+        }
+        p{
+            font-size:1rem;
+            font-weight: bold;
+        }
+    }
+
+    .introduction-contents{
+        display: block;
+        h3{
+            font-size:1.25rem;
+            font-weight: bold;
+            }
+        h4{
+            font-size:1rem;
+            }
+        span{
+        font-size:calc(0.9rem + .3vw);
+        }
+        img{
+            width: 200px;
+        }
+        .pfc-menu{
+            display: inline-block;
+        }
+    }
+        .introduction{
+            .bg-protein {
+                 width: 11em;
+            }
+            .bg-fat {
+                width: 11em;
+                }
+            .bg-carbohydrate {
+                width: 11em;
+            }
+            .menu{
+                 padding-right: 1.5rem;
+                 padding-left: 1.5rem;
+                 p{
+                     font-size:1.2rem;
+                 }
+            }
+            .menu2{
+                 padding-right: 1.5rem;
+                 padding-left: 1.5rem;
+                 p{
+                     font-size:1.2rem;
+                 }
+            }
+            .menu-task{
+                display:inline-flex;
+                margin-right: 1.5rem;
+            }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* 768px以下に適用されるCSS（タブレット用） */
+    .language{
+        p{
+        font-size:0.827rem;
+        font-weight: bold;
+        }
+    }
+        .work{
+        img{
+            width: 15.4rem;
+        }
+    }
+        .about{
+        p{
+            font-size:1rem;
+        }
+    }
+.introduction-contents {
+    display: block;
+    justify-content: space-evenly;
+    margin: 1em 2em;
+}
+
+    .introduction{
+    text-align: center;
+    font-weight: bold;
+    padding-bottom:3em;
+        input[type="checkbox"]{
+           transform:scale(1.3)
+        }
+    .menu{
+        background-color: orange;
+        padding-right: 1.5rem;
+         padding-left: 1.5rem;
+             }
+    .menu2{
+        background-color: aqua;
+        padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    }
+        .parameter{
+        padding:0.5rem;
+     }
+     .bg-fat{
+         width: 9em;
+     }
+     .bg-protein{
+        width: 9em;
+     }
+     .bg-carbohydrate{
+         width: 9em;
+     }
+     .kcal{
+         width: 9rem;
+     }
+    }
+
+// ----------------ログイン後----------------------
+
+    .home-menu{
+        .home-contents{
+        margin:0.5rem;
+        display: block;
+        width: 450px;
+        padding:1rem 0;
+        }
+        img{
+            width: 250px;
+        }
+    }
+}
+

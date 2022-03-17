@@ -1,0 +1,88 @@
+@media screen and (max-width: 599px) {
+	/* 599px以下に適用されるCSS（タブレット用） */
+    .header-menu{
+        display:block;
+        h2{
+            padding-top:4.5rem;
+        }
+        img{
+            display: none;
+        }
+    }
+    .modal-open{
+        padding-right:0 !important;
+    }
+
+    .main-title{
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-size:4em;
+        }
+    }
+    .work{
+        display: block;
+        .work-items{
+            display: block;
+        }
+        img{
+            width: 15.4rem;
+        }
+        .fs-1{
+            font-size:calc(2rem + 1.5vw)!important;
+        }
+    }
+    .br{
+        display: inline;
+    }
+    .language{
+        display: none;
+    }
+    .language-sp{
+        display: block;
+        background-color: #fff;
+        margin:0 3.5em;
+        border-radius: 15px;
+        padding-top:25px;
+        padding-bottom:10px;
+    }
+
+    // ---------------------------------------------------muscle-questのCSS---------------------------------------------------
+    .sp-main-image img {
+    width: 150px;
+    }
+    .introduction-contents{
+        .pfc-menu {
+            display: inline-flex;
+        }
+        .parameter p{
+            font-size:0.9rem;
+        }
+    }
+    .header-list{
+        display: none;
+    }
+    .register-menu{
+        .sign-form{
+        width: 300px;
+        }
+        h2{
+            font-size:1.2rem;
+            padding-top:0.7rem;
+        }
+    }
+
+    // ----------------ログイン後----------------------
+    .home-menu{
+        .home-contents{
+        width: initial;
+        padding:1rem 0;
+        }
+        img{
+            width: 200px;
+        }
+        .content-text{
+            width: initial;
+                }
+    }
+}
