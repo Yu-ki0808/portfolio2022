@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('weights', function (Blueprint $table) {
+        Schema::create('todos', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('user_id');
-            $table->float('weight');
-             $table->datetime('date_key');
+            $table->string('date_key');
+            $table->integer('user_id');
+            $table->string('target_body', 100);
+            $table->string('menu', 100);
+            $table->string('target_unit',);
+            $table->integer('number');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weight');
+        Schema::dropIfExists('todos');
     }
 };

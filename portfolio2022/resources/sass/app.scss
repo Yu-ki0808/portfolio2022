@@ -209,12 +209,12 @@ p {
 .introduction input[type=checkbox] {
   transform: scale(2);
 }
-.introduction .menu {
+.introduction .menu1 {
   background-color: orange;
   padding-right: 3rem;
   padding-left: 3rem;
 }
-.introduction .menu p {
+.introduction .menu1 p {
   font-size: 1.5rem;
 }
 .introduction .menu2 {
@@ -339,6 +339,114 @@ footer {
 .todo{
     img{
         width: 200px;
+        margin-bottom:1rem;
+    }
+    .btn{
+        margin: 0 1rem;
+    }
+}
+.day-button{
+    .Sunday{
+        background-color: red;
+    }
+    .Monday{
+        background-color: orange;
+    }
+    .Tuesday{
+        background-color: rgb(175, 27, 51);
+    }
+    .Wednesday{
+        background-color: #66CC9A;
+    }
+    .Thursday{
+        background-color: #F3642C;
+    }
+    .Friday{
+        background-color: #3697F8;
+    }
+    .Saturday{
+        background-color: rgb(218, 63, 218);
     }
 }
 
+    .introduction{
+        .menu{
+            width: 650px;
+        }
+        .menu-todo{
+            border: 1px solid #dee2e6;
+            box-shadow: 3px 3px;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 1rem;
+            margin-top:1rem;
+        }
+        // .menu-todo:nth-child(odd){
+        //     margin-right: 1rem;
+        // }
+        .todo-menu p{
+            font-size:1.2rem;
+        }
+        h4{
+            margin-top:0.5rem;
+        }
+    }
+select{
+     text-align:-webkit-center !important;
+}
+.alert {
+    padding: 0 0 !important;
+    padding-top:1rem !important;
+}
+.shoulder{
+    background-color: rgb(226, 152, 13) !important;
+}
+.arm{
+    background-color: rgb(207, 44, 44) !important;
+}
+.chest{
+    background-color: greenyellow !important;
+}
+.abdominal{
+    background-color: yellow !important;
+}
+.back{
+    background-color: blueviolet !important;
+}
+.lower{
+    background-color: rgb(28, 28, 184) !important;
+}
+.menu-check{
+    button{
+        border:none;
+    }
+}
+
+.profile-contents{
+  font-family: "Arial Black", "Noto Sans JP", sans-serif;
+
+    .gender-img{
+        width: 150px;
+        height: 150px;
+        align-self: center;
+    }
+        button{
+        margin-top:1rem;
+    }
+    .status-img{
+        width: 250px;
+        height: 250px;
+        align-self:center ;
+    }
+}
+.profile-content{
+    align-self:center ;
+}
+
+.profile-area{
+    display: flex;
+    border:3px solid black;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: space-evenly;
+}

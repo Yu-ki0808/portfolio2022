@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('weights', function (Blueprint $table) {
-            $table->id();
-            $table->tinyInteger('user_id');
-            $table->float('weight');
-             $table->datetime('date_key');
-            $table->timestamps();
+        Schema::table('todos', function (Blueprint $table) {
+            $table->integer('target_weight')->after('target_unit')->comment('重リの重さ');
+
         });
     }
 
@@ -29,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weight');
+        Schema::table('todos', function (Blueprint $table) {
+            $table->dropColumn('target_weight');
+        });
     }
 };

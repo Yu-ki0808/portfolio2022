@@ -92,15 +92,16 @@
                 <h3 class=>運動メニュー</h3>
 
                 <div class="menu-task">
-                    <div class="menu py-2">
+                    <div class="menu1 py-2">
                         <h4>Arm</h4>
                         <p>アームカール 15kg<BR>
                         ３セット✖10</p>
                     </div>
-                    <div class="menu-check">
-                        <input type="checkbox">
+                   <div class="px-3">
+                    <input type="checkbox">
                     </div>
                     </div>
+
                     <div class="menu-task mt-3">
                         <div class="menu2 py-2">
                             <h4>Chest</h4>
@@ -181,7 +182,7 @@
 
         </footer>
 
-        <script>
+        {{-- <script>
     $('.send').on('click', evt => {
     form.submit();
     form[0].reset();
@@ -189,7 +190,7 @@
     //任意の実行したい処理
     return false;
 })
-</script>
+</script> --}}
 
 
 

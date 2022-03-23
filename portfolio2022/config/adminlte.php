@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Muscle-quest',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -261,7 +261,7 @@ return [
         ],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => 'muscle-quest/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('weights', function (Blueprint $table) {
+        Schema::create('levels', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('user_id');
-            $table->float('weight');
-             $table->datetime('date_key');
+            $table->integer('Lv')->comment('レベル');
+            $table->integer('EXP')->comment('EXP');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weight');
+        Schema::dropIfExists('level');
     }
 };

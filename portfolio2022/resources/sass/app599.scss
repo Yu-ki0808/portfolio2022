@@ -85,4 +85,31 @@
             width: initial;
                 }
     }
+    .todo img{
+        width: 150px;
+    }
+    .introduction .menu {
+        padding-right: 1.1rem;
+        padding-left: 1.1rem;
+        width: 250px;
+        height: 150px;
+    }
+
+
+    .todo .btn-down:nth-child(1){
+        margin-bottom:1.2rem;
+    }
+    .todo .btn-down:nth-child(2){
+        margin-bottom:1.2rem;
+    }
+    .introduction{
+                .todo-menu p{
+            font-size:1rem;
+        }
+    }
+    .day-button{
+        .btn-lg{
+            padding:0.5rem 0.5rem;
+        }
+    }
 }

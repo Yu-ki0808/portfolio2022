@@ -137,7 +137,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'gender' => 'required|integer|max:2',
-            'birthdate' => 'required|string|digits:8',
+            'birthday' => 'required|string|digits:8',
             'height' => 'required|integer|max:299',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -162,6 +162,8 @@ class RegisterController extends Controller
                 'birthday' => $request->birthdate,
                 'height' => $request->height,
                 'weight' => $request->weight,
+                'Lv' => 1,
+                'EXP' => 1,
                 'password' => Hash::make($request->password),
             ]);
             $emailVerification->register();

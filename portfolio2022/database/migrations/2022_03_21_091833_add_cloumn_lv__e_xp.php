@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('weights', function (Blueprint $table) {
-            $table->id();
-            $table->tinyInteger('user_id');
-            $table->float('weight');
-             $table->datetime('date_key');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('EXP')->after('weight')->comment('経験値');
+            $table->integer('Lv')->after('weight')->comment('レベル');
+
         });
     }
 
@@ -29,6 +27,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weight');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('EXP');
+            $table->dropColumn('Lv');
+        });
     }
 };

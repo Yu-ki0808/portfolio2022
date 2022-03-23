@@ -16,11 +16,5 @@ class muscle_quest_homeController extends Controller
     {
         return view('muscle-quest.home');
     }
-    public function todo()
-    {
-        
-        return view('muscle-quest.todo');
-    }
-
 
 }
