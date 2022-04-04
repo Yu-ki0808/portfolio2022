@@ -69,6 +69,7 @@
                                     <button class="far fa-check-square fa-2x" name="check_id" value="{{$todo->check_id}}">
                                         <input type="hidden" value="{{$todo->id}}" name="id">
                             @endif
+                            <input type="hidden" value="{{$url_day}}" name="url_day">
                         </form>
                     </div>
                 </div>
@@ -79,9 +80,8 @@
                 @endif
                 </div>
     </div>
-
     <!-- 運動メニュー名登録Modal -->
-    <div class="modal fade" id="menuAddModal" tabindex="-1" aria-labelledby="menuAddModal" aria-hidden="true" value="{{ session('error') }}">
+    <div class="modal fade" id="menuAddModal" tabindex="-1" aria-labelledby="menuAddModal" aria-hidden="true" >
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -91,14 +91,16 @@
                     <form action="{{route('todo-create')}}" method="POST">
                         @csrf
                         <div class="modal-body text-center menu-modal">
-                            @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                            @if( session('error')  ==1)
+                                @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                @endif
                             @endif
                             <label for="">部位・タイプ</label><br>
             <select name="target_body" id="" class="text-center py-1 w-75 mb-3" style="text-align:-webkit-center;" >
@@ -135,6 +137,17 @@
         <form action="{{route('todo.create')}}" method="POST">
             @csrf
         <div class="modal-body text-center menu-modal">
+            @if( session('error')  ==2)
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    </div>
+                @endif
+            @endif
             <label for="">日付</label><br>
                 {{Functions::dayList()}}
                 <Br>
@@ -167,7 +180,7 @@
                         <label for="">セット数</label><br>
                         <input type="number" name="target_set" class="text-center py-1 w-25 mb-3" ><br>
                     </div>
-                    <label for="">目標数値</label><br>
+                    <label for="">目標回数</label><br>
                     <input type="number" name="number" class="text-center py-1 w-25 mb-3" required><br>
                     </div>
 
@@ -182,9 +195,28 @@
     </div>
 
 
-
+<!-- Modal -->
+<div class="modal fade" id="levelModal"data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><span class="fw-bold fs-1">レベル{{Auth::user()->Lv}}<span>になりました</h5>
+      </div>
+      <div class="modal-body text-center">
+        <img src="{{asset('img/muscle-quest/level.png')}}" alt="" width="250">
+      </div>
+      <div class="modal-footer">
+        <form action="{{route('session.delete')}}" method="POST">
+            @csrf
+        <input type="submit" class="btn btn-secondary" data-bs-dismiss="modal" value="Close">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <input id="error_modal_open" class="modal-open" type="hidden" value="{{ session('error') }}">
+<input id="level_up" class="modal-open" type="hidden" value="{{session('level')}}">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="{{ asset('js/form.js') }}" defer></script>

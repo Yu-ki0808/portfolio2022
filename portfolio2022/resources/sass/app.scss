@@ -21,6 +21,12 @@ p {
 .br {
   display: inline-block;
 }
+a{
+    text-decoration: none;
+}
+.all-body{
+    background-color: orange;
+}
 
 .main-title {
   display: flex;
@@ -34,7 +40,7 @@ p {
   align-items: flex-end;
 }
 
-.profile-area img {
+.portfolio-profile-area img {
   width: 250px;
 }
 
@@ -43,23 +49,69 @@ p {
   border-radius: 10px;
   box-shadow: 4px 4px;
   display: inline-flex;
+  background-color: white;
 }
 
+
 .About {
-  background-color: #F7F5F5;
+  background-color: white;
   padding-top: 30px;
   padding-bottom: 50px;
   border-radius: 30px;
   font-family: "Arial";
+  img{
+      width: 250px;
+  }
+  .About-description{
+      border: 6px solid #070707;
+      border-radius: 10px;
+      box-shadow: 4px 4px;
+      display: inline-block;
+      width: 400px;;
+  }
 }
 
-.About img {
-  width: 250px;
+.link {
+    text-decoration: none;
 }
+
+    .contact-contents{
+    padding-top: 30px;
+    padding-bottom: 50px;
+        img{
+            width: 250px;
+        }
+        .inquiry-img{
+        width: 45px;
+        margin:0 1em;
+        }
+        .About-inquiry{
+            text-align: center;
+            justify-content: center;
+            padding:5px;
+            border:3px solid #000;
+            display: inline-flex;
+            background-color: white;
+            box-shadow: 4px 4px;
+            }
+            .About-inquiry a:hover{
+                background-color: orange;
+                opacity: 20;
+            }
+        .About-description {
+        border: 6px solid #070707;
+        border-radius: 10px;
+        box-shadow: 4px 4px;
+        margin:0 auto;
+        width: 30em;
+        display: block;
+        margin-bottom:2.5em;
+        background-color: white;
+        }
+    }
 
 .language {
   background-color: #fff;
-  margin: 0 3.5em;
   border-radius: 15px;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -113,13 +165,33 @@ p {
 }
 
 .work {
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding: 50px;
   display: flex;
   justify-content: center;
+  h4{
+      font-family: 'Arial';
+  }
+}
+.work-white{
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+
+    img{
+        margin-right:5em;
+    }
+}
+.work-black{
+    border-radius: 0 0 10px 10px;
+    background-color: black;
+    img{
+        margin-left:5em;
+    }
 }
 .work .work-items {
   display: flex;
+  h4{
+      font-size:1rem;
+  }
 }
 .work img {
   width: 400px;
@@ -128,7 +200,38 @@ p {
 
 .h2-title-work {
   font-size: 3.5em;
-  margin-top: -40px;
+  margin-top:1em;
+  margin-bottom:-25px;
+}
+
+
+
+.btn-site-one{
+    color: white;
+    background-color: black;
+}
+.btn-site{
+    color: white;
+    border:3px solid white;
+    background-color: black;
+}
+.btn-github{
+    color: black;
+    border:3px solid black;
+}
+.btn-rev-site{
+    color:black;
+    border:3px solid white;
+    background-color: white;
+}
+.btn-rev-github{
+    color: white;
+    border:3px solid white;
+}
+
+.button-area {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .header-menu {
@@ -158,6 +261,7 @@ p {
 }
 .pc-main-image img {
   width: 250px;
+  height: 250px;
 }
 
 .sp-main-image {
@@ -205,6 +309,14 @@ p {
   text-align: center;
   font-weight: bold;
   padding-bottom: 3em;
+  .total-border{
+      border:1px solid #dee2e6;
+      border-top:10px double #000;
+      box-shadow: 3px 3px;
+  }
+  .border{
+      box-shadow: 3px 3px;
+  }
 }
 .introduction input[type=checkbox] {
   transform: scale(2);
@@ -236,16 +348,20 @@ p {
   font-size: calc(1.05rem + 0.3vw);
 }
 .introduction .bg-fat {
-  width: 15em;
+  width: 13em;
   background-color: #66CC9A;
 }
 .introduction .bg-protein {
-  width: 15em;
+  width: 13em;
   background-color: #3697F8;
 }
 .introduction .bg-carbohydrate {
-  width: 15em;
+  width: 13em;
   background-color: #FF9934;
+}
+.introduction .bg-total {
+  width: 13em;
+  background-color: #fc5185;
 }
 .introduction meter {
   width: 50%;
@@ -262,13 +378,14 @@ p {
 }
 .introduction .kcal {
   width: 11rem;
+margin-top: 10px;
 }
 
 .start-contents {
   text-align: center;
-  padding: 5em 0;
+  padding: 3em 0;
   background-color: #F9FBFE;
-  margin: 0 1rem;
+  background-color: aqua;
 }
 .start-contents .btn {
   margin: 2em 0;
@@ -369,6 +486,7 @@ footer {
     }
 }
 
+
     .introduction{
         .menu{
             width: 650px;
@@ -450,3 +568,75 @@ select{
     background-color: white;
     justify-content: space-evenly;
 }
+.modal-input{
+    label{
+        width: 50px;
+    }
+}
+
+.calorie{
+    .calorie-dis{
+        border:1px solid gray;
+        border-radius: 25px;
+        padding:0 1em;
+    }
+    img{
+        width: 200px;
+    }
+}
+.introduction{
+    .muscle-line{
+        background-image: linear-gradient(rgba(0,0,0,0) 70%, rgb(252,81,133) 70%);
+        display: inline;
+    }
+    .diet-line{
+        background-image: linear-gradient(rgba(0,0,0,0) 70%, rgb(13, 153, 218) 70%);
+        display: inline;
+    }
+    .calorie-result {
+        border:1px solid gray;
+        border-radius: 25px;
+        margin-bottom:1.5em;
+
+            p{
+            font-size:0.9rem;
+            }
+    }
+}
+.none{
+    display: none;
+}
+.result{
+    display: block;
+}
+.head-border
+{
+    border-bottom:none;
+}
+.calorie-table{
+    width: 100%;
+    font-size:1.25em;
+    align-items:center;
+    tr{
+        height: 3em;
+    }
+}
+.muscle{
+    background-color: rgb(252,81,133);
+    color: white;
+}
+.diet{
+    background-color: rgb(13, 153, 218) ;
+    color:white;
+}
+
+.tr-sp{
+    display: none;
+}
+
+    ul{
+        list-style: none !important;
+    }
+
+
+

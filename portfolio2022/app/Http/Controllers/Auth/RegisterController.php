@@ -84,6 +84,7 @@ class RegisterController extends Controller
             return back()
                 ->with([
                     'email' => $request->email,
+                    'error' =>1,
                 ])
                 ->withErrors($validator);
         } else {
@@ -102,8 +103,8 @@ class RegisterController extends Controller
             }
             Mail::to($request->email)->send(new Email_Verification($emailVerification));
             EmailVerification::find($request);
-
         }
+        return back()->with(['mail' =>1]);
     }
 
     public function emailVerifyComplete($token)
@@ -128,17 +129,18 @@ class RegisterController extends Controller
             return redirect(route('/'))
                 ->with(['message' => 'メールアドレスの認証に失敗しました。管理者にお問い合わせください。']);
         }
-        return view('auth.register')
+        return view('auth.pre_register')
             ->with(['token' => $emailVerification->token]);
     }
 
     protected function create_validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|min:4|max:20',
             'gender' => 'required|integer|max:2',
             'birthday' => 'required|string|digits:8',
             'height' => 'required|integer|max:299',
+            'weight' => 'required|string|max:299',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -159,7 +161,7 @@ class RegisterController extends Controller
                 'name' => $request->name,
                 'email' => $emailVerification->email,
                 'gender' => $request->gender,
-                'birthday' => $request->birthdate,
+                'birthday' => $request->birthday,
                 'height' => $request->height,
                 'weight' => $request->weight,
                 'Lv' => 1,
@@ -170,7 +172,7 @@ class RegisterController extends Controller
             $emailVerification->update();
             Auth::login($user);
             $user = Auth::user();
-            return redirect()->route('muscle-quest/dashboard')->with(['user' => $user]);
+            return redirect()->route('dashboard')->with(['user' => $user]);
         }
     }
 }

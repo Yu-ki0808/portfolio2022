@@ -32,6 +32,10 @@
             font-size:calc(2rem + 1.5vw)!important;
         }
     }
+    .About .About-description{
+        border:none;
+        box-shadow: initial;
+    }
     .br{
         display: inline;
     }
@@ -110,6 +114,28 @@
     .day-button{
         .btn-lg{
             padding:0.5rem 0.5rem;
+            font-size:1rem;
         }
+    }
+        .calorie{
+        h2{
+            font-size:1.25rem;
+            font-weight: bold;
+        }
+    }
+    .calorie-table{
+    width: 100%;
+    font-size:0.9em;
+    }
+    .tr-pc{
+        display: none;
+    }
+    .tr-sp{
+        display: inline-block;
+        border-radius: 10px;
+        width: 300px;
+    }
+    .re-kal{
+        width: 8rem;
     }
 }

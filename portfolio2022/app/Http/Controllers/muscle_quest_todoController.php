@@ -8,6 +8,8 @@ use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Illuminate\Support\Facades\Validator;
 use App\Models\todo_menu;
 use App\Models\todo;
+use App\Models\level;
+use App\Models\User;
 use Carbon\Carbon;
 use Laravel\Ui\Presets\React;
 
@@ -104,7 +106,7 @@ class muscle_quest_todoController extends Controller
 
         return view('muscle-quest.todo')->with(['sampleJson'=>$sampleJson,'menus'=>$menus,'todos' => $todos , 'check_todo' => $check_todo, 'url_day' => $url_day, 'add_day' =>$add_day, 'sub_day' => $sub_day, 'week' => $week, 'english_week' => $english_week]);
     }
-    
+
 
     public function store(Request $request){
         $validator = Validator::make($request->all(), [
@@ -135,15 +137,25 @@ class muscle_quest_todoController extends Controller
             $request->all(),
             [
                 'target_body' => 'required',
+                'target_unit' => 'required_if:target_body,有酸素',
                 'menu' => 'required',
-                'target_unit' => 'required',
-                'target_weight' => 'required_without($request->target_body = "aerobic"),($request->target_body ="abdominal")',
+                'target_weight' => 'required_if:target_body,肩,腕,胸筋,腹筋,背筋,下半身',
+                'target_set' => 'required_if:target_body,肩,腕,胸筋,腹筋,背筋,下半身',
+                'number' => 'required_if:target_body,肩,腕,胸筋,腹筋,背筋,下半身',
+
             ],
             [
                 'target_body.required' => '部位・タイプをを選択してください',
-                'menu.required' => 'メニュー名を入力してください'
+                'target_unit.required_if' => '有酸素の場合は、目標単位を入力してください',
+                'menu.required' => 'メニュー名を入力してください',
+                'target_weight.required_if' => '重さを入力してください',
+                'target_set.required_if' => '目標回数を入力してください',
+                'number.required_if' => 'セット数を入力してください',
             ]
         );
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->with('error', 2)->withInput();
+        }
         $year = $request->year;
         $month = $request->month;
         $day = $request->date;
@@ -210,17 +222,37 @@ class muscle_quest_todoController extends Controller
     }
 
     public function check_update(Request $request){
+        session()->put('level', 0);
         $todo = todo::findOrFail($request->id);
         if($request->check_id == 0){
             $todo->check_id =1;
+            $user_exp = User::findOrFail(Auth::id());
+            $need_exp = level::where('LV',Auth::user()->Lv +1)->first(['EXP']);
+            $user_exp->EXP += 1;
+
+            if($user_exp->EXP == $need_exp->EXP){
+                $user_exp->Lv += 1;
+                session()->put('level',1);
+            }
+
         }else{
             $todo->check_id =0;
+            $user_exp = User::findOrFail(Auth::id());
+            $need_exp = level::where('LV', Auth::user()->Lv)->first(['EXP']);
+            $user_exp->EXP -= 1;
+            if($user_exp->EXP < $need_exp->EXP){
+                $user_exp->Lv -= 1;
+            }
         }
+        $user_exp->save();
         $todo->save();
 
         return back();
-
     }
 
+    public function session_delete(){
+        session(['level' => 0]);
+        return back();
+    }
 
 }

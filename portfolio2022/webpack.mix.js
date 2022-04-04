@@ -15,4 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/app1024.scss', 'public/css')
     .sass('resources/sass/app599.scss', 'public/css')
+    .sass('resources/sass/style.scss', 'public/css')
+    .sass('resources/sass/style1024.scss', 'public/css')
+    .sass('resources/sass/style599.scss', 'public/css')
     .vue();

@@ -29,10 +29,16 @@
         <h5 class="modal-title" id="staticBackdropLabel">体重を入力</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body text-center">
+      <div class="modal-body text-center modal-input">
           <label for="" class="me-2">体重</label>
           <input type="number" step="0.1" class="w-25" name="weight_record">
-          <span class="fw-bold fs-5">Kg</span>
+          <span class="fw-bold fs-5">Kg</span><br>
+          <label for="" class="me-2">筋肉量</label>
+          <input type="number" step="0.1" class="w-25" name="muscle_mass">
+          <span class="fw-bold fs-5">Kg</span><br>
+          <label for="" class="me-2">体脂肪</label>
+          <input type="number" step="0.1" class="w-25" name="body_fat">
+          <span class="fw-bold fs-5">%</span><br>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
@@ -42,3 +48,8 @@
     </div>
   </div>
 </div>
+
+
+
+
+

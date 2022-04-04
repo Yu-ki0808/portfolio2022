@@ -1,0 +1,67 @@
+@media screen and (max-width: 599px) {
+	/* 599px以下に適用されるCSS（タブレット用） */
+    .kids-container{
+        .me-3{
+            padding-right:initial !important;
+        }
+    }
+
+    .top-contents img{
+        width: 320px;
+    }
+    .sb-br{
+        display: block;
+    }
+    .header-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+    header{
+        img{
+            width: 18rem;
+        }
+    }
+    .kids-container .kids-description {
+    background-color: yellow;
+    border-radius: 3px;
+    }
+    .pc-h3{
+        display: none;
+    }
+    .sp-h3{
+        display: block;
+    }
+
+                .order{
+        img{
+            width: auto;
+            height: 50px;
+            }
+        }
+    .kids-container{
+        .me-3{
+            padding-right: initial !important        ;
+        }
+    }
+    #saikoro img{
+        width: 295px;
+    }
+
+    .contents-list-primary {
+            width: 350px;
+        }
+        .contents-list-pink {
+            width: 350px;
+
+        }
+        .contents-list-green {
+            width: 350px;
+        }
+        .contents-list-warning {
+            width: 350px;
+        }
+        .contents-list-purple {
+            width: 350px;
+        }
+}

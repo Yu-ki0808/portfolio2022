@@ -51,7 +51,7 @@
                     <input type="number" class="form-control"  name="height" required >
                 </div>
                 <div class="mb-3">
-                    <label for="weight" class="form-label" >体重</label><br>
+                    <label for="weight" class="form-label" >体重(例.70.4)</label><br>
                     <input type="number" class="form-control" name="weight" step="0.1" required >
                 </div>
 

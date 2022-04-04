@@ -86,6 +86,12 @@
         }
     }
         .introduction{
+            .border{
+                box-shadow: initial;
+            }
+            .total-border{
+                border-top:initial;
+            }
             .bg-protein {
                  width: 11em;
             }
@@ -95,7 +101,19 @@
             .bg-carbohydrate {
                 width: 11em;
             }
-            .menu{
+            .bg-result-protein {
+                 width: 11em;
+            }
+            .bg-result-fat {
+                width: 11em;
+                }
+            .bg-result-carbohydrate {
+                width: 11em;
+            }
+            .bg-total {
+                width: 11em;
+            }
+            .menu1{
                  padding-right: 1.5rem;
                  padding-left: 1.5rem;
                  p{
@@ -120,6 +138,9 @@
         width: 500px;
         height: 150px;
     }
+    .introduction .aero-menu {
+        height: 100px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -131,8 +152,12 @@
         }
     }
         .work{
+            display: block;
         img{
             width: 15.4rem;
+        }
+        .work-items{
+            display: block;
         }
     }
         .about{
@@ -145,6 +170,10 @@
     justify-content: space-evenly;
     margin: 1em 2em;
 }
+
+    .button-area{
+        margin:1.5em 0;
+    }
 
     .introduction{
     text-align: center;
@@ -166,17 +195,20 @@
         .parameter{
         padding:0.5rem;
      }
-     .bg-fat{
-         width: 9em;
-     }
-     .bg-protein{
-        width: 9em;
-     }
-     .bg-carbohydrate{
-         width: 9em;
-     }
+    //  .bg-fat{
+    //      width: 9em;
+    //  }
+    //  .bg-protein{
+    //     width: 9em;
+    //  }
+    //  .bg-carbohydrate{
+    //      width: 9em;
+    //  }
      .kcal{
          width: 9rem;
+     }
+     .re-kal{
+         width: 11rem;
      }
     }
 
@@ -204,6 +236,13 @@
 
     .profile-area{
         display: block;
+    }
+
+    .calorie{
+        h2{
+            font-size:1.5rem;
+            font-weight: bold;
+        }
     }
 }
 

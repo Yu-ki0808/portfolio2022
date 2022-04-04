@@ -266,7 +266,7 @@ return [
         ],
         [
             'text' => '消費カロリー計算',
-            'url'  => 'admin/settings',
+            'url'  => 'muscle-quest/calorie',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

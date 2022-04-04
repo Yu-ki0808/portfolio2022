@@ -49,9 +49,10 @@ class LoginRequest extends FormRequest
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
+                // 該当するレコードがない場合の処理
                 'email' => trans('auth.failed'),
             ]);
-        }
+                    }
 
         RateLimiter::clear($this->throttleKey());
     }

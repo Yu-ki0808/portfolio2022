@@ -12,5 +12,7 @@ class Weight extends Model
         'user_id',
         'weight',
         'date_key',
+        'muscle_mass',
+        'body_fat',
     ];
 }

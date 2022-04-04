@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Exceptions;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;

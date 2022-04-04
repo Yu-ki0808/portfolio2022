@@ -1,4 +1,6 @@
 @extends('layouts.muscle-quest')
+@section('content')
+
 <div class="header-menu">
     <h1 class="text-start">Muscle-quest</h1>
     <div class="header-list">
@@ -6,18 +8,21 @@
         <button type="button" class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#LoginModal">
             ログイン
         </button>
-        <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#Signup_ModalToggle" role="button">無料会員登録</a>
+        <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#RegisterModal" role="button">無料会員登録</a>
     </div>
 </div>
 
-
 <div class="container">
     <div class="pc-main-image">
+        {{-- ------PCトップ画像表示----------------------- --}}
         <img src="{{asset('img/muscle-quest/ran.png')}}" alt="">
         <img src="{{asset('img/muscle-quest/motion.png')}}" alt="">
         <img src="{{asset('img/muscle-quest/yoga.png')}}" alt="">
         <img src="{{asset('img/muscle-quest/swiming.png')}}" alt="">
     </div>
+
+    {{-- ------SPトップ画像表示----------------------- --}}
+    {{-- ------SPトップ画像表示----------------------- --}}
     <div class="sp-main-image">
          <div class="row">
             <div class="col">
@@ -43,8 +48,9 @@
             </div>
         </div>
 
-        <h2 class="contents-h2">Contents</h2>
-            <div class="contents mt-2 ">
+    {{-- ------PCコンテンツ表示----------------------- --}}
+    <h2 class="contents-h2">Contents</h2>
+    <div class="contents mt-2 ">
                 <div>
                     <img src="{{asset('img/muscle-quest/book.png')}}" alt="" width="250px">
                     <p>運動メニューの作成と記録し、<br>筋肉日記を残す</p>
@@ -63,6 +69,7 @@
                 </div>
             </div>
 
+            {{-- ------SPコンテンツ表示----------------------- --}}
             <div class="sp-contents-image">
                 <div class="row">
                     <div class="col">
@@ -86,6 +93,8 @@
                 </div>
             </div>
 
+
+    {{-- ------サービス内容説明----------------------- --}}
             <h2 class="introduction-h2">Introduction</h2>
         <div class="introduction-contents">
         <div class="introduction mt-2 ">
@@ -112,18 +121,16 @@
                             <input type="checkbox">
                         </div>
                         </div>
-
                 </div>
 
             <div class="introduction mt-2 ">
-                <h3 class="mb-5">自分の運動パラメータを把握</h3>
+                <h3 class="mb-5">自分の運動ステータスを把握</h3>
                 <div class="border d-inline-flex  align-items-center justify-content-center">
                     <div class="parameter">
                         <p>年齢・身長・体重から<br>ハリス・ベネディクト方式改良版にて計算。</p>
                         <p>基礎代謝：<span>1,710Kcal</span></p>
                         <p>総消費カロリー：<span>2,908kcal</span></p>
                         <p>摂取カロリー中央値：<span>2,309kcal</span></p>
-
                     </div>
                     </div>
                 </div>
@@ -131,7 +138,7 @@
 
     <div class="introduction-contents">
         <div class="introduction mt-2 ">
-                <h3 class=>摂取カロリー中央値のPFCを表示</h3>
+                <h3 class=>摂取カロリーの目安PFCを表示</h3>
 
                 <div class="border pfc-menu  align-items-center">
                     <div class=" bg-protein py-2">
@@ -173,24 +180,23 @@
 
         <div class="start-contents">
             <h3>さっそく始めよう</h3>
-             <p>運動を継続すること<Br>でいつまでも若く元気な人生を楽しもう。</p>
+             <p>運動を継続することで<Br>いつまでも若く元気な人生を楽しもう。</p>
             <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#Signup_ModalToggle" role="button">無料会員登録</a>
         </div>
 
         <footer>
             <p>© 2022 Muscle-Quest</p>
-
         </footer>
+<input type="text" value="{{session('mail')}}" id="mail-modal">
+<input type="text" value="{{session('error')}}" id="error-modal">
+@if(!session('error')  ==1 && $errors->all())
+<input type="hidden" value="2" id="login">
+@endif
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+ <head>
 
-        {{-- <script>
-    $('.send').on('click', evt => {
-    form.submit();
-    form[0].reset();
+ </head>
+</body>
+</html>
 
-    //任意の実行したい処理
-    return false;
-})
-</script> --}}
-
-
-
+@endsection

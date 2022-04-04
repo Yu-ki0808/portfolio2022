@@ -1,0 +1,89 @@
+@media screen and (max-width: 992px) {
+    /* 992px以下に適用されるCSS（タブレット用） */
+
+    .kids-contents{
+        img{
+            width: auto;
+            height: 100px;
+        }
+    }
+        .order{
+        img{
+            width: auto;
+            height: 100px;
+            }
+        }
+        .alphabet .table tbody .btn{
+    font-size:1.25rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* 768px以下に適用されるCSS（タブレット用） */
+    header{
+        img{
+            width: 30rem;
+        }
+    }
+    .kids-contents{
+        img{
+            width: auto;
+            height: 150px;
+        }
+    }
+
+.kids-container{
+    .kids-description {
+        display: block;
+    }
+    .d-flex{
+        display: block!important;
+        }
+        .next-button{
+            display: flex !important;
+        }
+    }
+
+
+            .order{
+        img{
+            width: auto;
+            height: 75px;
+            }
+        }
+
+        .contents-list-primary {
+            width: 370px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .contents-list-pink {
+            width: 370px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .contents-list-green {
+            width: 370px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .contents-list-warning {
+            width: 370px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .contents-list-purple {
+            width: 370px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .alhabet{
+            .me-5{
+                margin-right:0 !important;
+            }
+        }
+        #saikoro3  button{
+            margin-right: 0 !important;
+        }
+
+}

@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use App\Models\level;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+        // ▼下記3行を追加
+        View::composer('*', function ($view) {
+            if(Auth::id()){
+            $max_exp = level::where('Lv', Auth::user()->Lv +1)->first(['EXP']);
+            $min_exp = level::where('Lv', Auth::user()->Lv )->first(['EXP']);
+
+            $view->with(['max_exp'=> $max_exp, 'min_exp' =>$min_exp]);
+            }
+        });
     }
 }
