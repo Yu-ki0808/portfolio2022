@@ -204,30 +204,24 @@ a{
   margin-bottom:-25px;
 }
 
-
-
-.btn-site-one{
+.dark{
+    background-color: #000;
     color: white;
-    background-color: black;
 }
-.btn-site{
-    color: white;
-    border:3px solid white;
-    background-color: black;
+.dark:hover {
+    background-color: white !important;
+    color:#000 !important;
+    border:1px solid #000;
 }
-.btn-github{
-    color: black;
-    border:3px solid black;
-}
-.btn-rev-site{
-    color:black;
-    border:3px solid white;
+.light{
     background-color: white;
+    color: #000;
 }
-.btn-rev-github{
-    color: white;
-    border:3px solid white;
-}
+.light:hover {
+    background-color: #000;
+    color:white;
+    border:1px solid white;
+    }
 
 .button-area {
     display: flex;

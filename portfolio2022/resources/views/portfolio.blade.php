@@ -36,7 +36,7 @@
 
             <h2 class="h2-title-work">Work</h2>
 
-            <div class="d-flex work work-white">
+            <div class="work work-white">
                 <img src="{{asset('img/portfolio/muscle-quest.png')}}" alt="" class="bg-info">
                 <div class="work-items align-items-center">
                     <div class="flex-column">
@@ -44,9 +44,9 @@
                         <h4 class="fw-bold">筋トレ記録サイト。<br>経験値が貯まりレベルアップする仕組みを導入。<br>Laravel/MySQL/JavaScriptを利用しています。</h4>
                             <div class="button-area">
                                 <a href="{{route('muscle-quest/index')}}" class="link text-black">
-                                    <button class="btn btn-site-one">Site</button>
+                                    <button class="btn dark">Site</button>
                                 </a>
-                                <button class="btn btn-github">Github</button>
+                                <button class="btn btn-outline-dark">Github</button>
                             </div>
                     </div>
                 </div>
@@ -59,9 +59,9 @@
                         <h4 class="fw-bold">Web端末一台でカンタンにできる<Br>子供学習サイト</h4>
                            <div class="button-area">
                                 <a href="{{route('kids-pikori')}}" class="link text-black">
-                                    <button class="btn btn-rev-site me-5">Site</button>
+                                    <button class="btn btn-outline-light me-5">Site</button>
                                 </a>
-                                <button class="btn btn-rev-github">Github</button>
+                                <button class="btn light ">Github</button>
                             </div>
                         </div>
                 <img src="{{asset('img/portfolio/oo.png')}}" alt="" class="bg-info">

@@ -187,12 +187,12 @@
         <footer>
             <p>© 2022 Muscle-Quest</p>
         </footer>
-<input type="text" value="{{session('mail')}}" id="mail-modal">
-<input type="text" value="{{session('error')}}" id="error-modal">
+<input type="hidden" value="{{session('mail')}}" id="mail-modal">
+<input type="hidden" value="{{session('error')}}" id="error-modal">
 @if(!session('error')  ==1 && $errors->all())
 <input type="hidden" value="2" id="login">
 @endif
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
  <head>
 
  </head>

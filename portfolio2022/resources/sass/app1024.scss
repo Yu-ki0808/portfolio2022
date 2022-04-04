@@ -154,10 +154,20 @@
         .work{
             display: block;
         img{
-            width: 15.4rem;
+            width: 20.4rem;
         }
         .work-items{
             display: block;
+        }
+    }
+    .work-black {
+        img {
+            margin-left: 0;
+        }
+    }
+    .work-white {
+        img {
+            margin-right: 0;
         }
     }
         .about{
@@ -211,6 +221,7 @@
          width: 11rem;
      }
     }
+
 
 // ----------------ログイン後----------------------
 

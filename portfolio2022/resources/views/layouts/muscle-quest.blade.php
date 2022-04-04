@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{asset('/css/app1024.css')}}">
     <link rel="stylesheet" href="{{asset('/css/app599.css')}}">
     <script src="{{ asset('js/modal.js') }}" defer></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </head>
 <body>
 <!-- LoginModal -->
