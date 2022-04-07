@@ -1,4 +1,4 @@
-@extends('layouts.portfolio')
+@include('layouts.portfolio')
 <body>
 <div class="all-body">
     <div class="container text-center">
