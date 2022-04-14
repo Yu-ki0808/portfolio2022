@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\level;
-use Illuminate\Support\Facades\URL; 
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,10 +27,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (config('app.env') === 'production') {
-            URL::forceScheme('https');
-        }
-
         // ▼下記3行を追加
         View::composer('*', function ($view) {
             if(Auth::id()){
@@ -39,6 +35,10 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with(['max_exp'=> $max_exp, 'min_exp' =>$min_exp]);
             }
+        if (config('app.env') === 'production') {
+            URL::forceScheme('https');
+        }
+
         });
     }
 }
