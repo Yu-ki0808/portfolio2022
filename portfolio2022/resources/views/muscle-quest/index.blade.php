@@ -44,7 +44,7 @@
 
             <h2 class="text-center fw-bold mt-2">運動や筋トレの行動を<br>「経験値化」して継続しよう。</h2>
             <div class="text-center">
-                <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#Signup_ModalToggle" role="button">無料会員登録</a>
+                <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#RegisterModal" role="button">無料会員登録</a>
             </div>
         </div>
 
@@ -181,7 +181,7 @@
         <div class="start-contents">
             <h3>さっそく始めよう</h3>
              <p>運動を継続することで<Br>いつまでも若く元気な人生を楽しもう。</p>
-            <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#Signup_ModalToggle" role="button">無料会員登録</a>
+            <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#RegisterModal" role="button">無料会員登録</a>
         </div>
 
         <footer>
