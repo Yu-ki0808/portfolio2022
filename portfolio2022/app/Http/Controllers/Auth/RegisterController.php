@@ -99,7 +99,7 @@ class RegisterController extends Controller
                 return back()
                     ->with([
                         'email' => $request->email
-                    ])->withErrors(['error' => 'メールアドレスの登録に失敗しました。']);
+                    ])->withErrors(['error' => 'メールアドレスの登録に失敗しました。'])->with(['error' =>1]);
             }
             Mail::to($request->email)->send(new Email_Verification($emailVerification));
             EmailVerification::find($request);
