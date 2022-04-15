@@ -62,9 +62,9 @@ class calorieController extends Controller
             $pars = ['20%', '20%', '60%'];
             $line = 'diet-line';
             $muscle_calories = [
-                [round(($total + 200) * 0.2), round(($total + 200) * 0.2 / 4),],
-                [round(($total + 200) * 0.5), round(($total + 200) * 0.3 / 9),],
-                [round(($total + 200) * 0.6), round(($total + 200) * 0.5 / 4),],
+                [round(($total - 200) * 0.2), round(($total - 200) * 0.2 / 4),],
+                [round(($total - 200) * 0.5), round(($total - 200) * 0.3 / 9),],
+                [round(($total - 200) * 0.6), round(($total - 200) * 0.5 / 4),],
             ];
             $total_sum = $total -200;
         }
