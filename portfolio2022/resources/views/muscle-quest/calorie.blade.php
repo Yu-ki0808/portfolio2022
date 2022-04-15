@@ -3,7 +3,6 @@
 @section('content_header')
 @extends('layouts.muscle-quest.login-muscle-quest')
 @section('content')
-
     <div class="contaner text-center calorie">
         <h2 class="pt-4">総消費カロリー&目的別摂取カロリー計算</h2>
         <img src="{{asset('img/muscle-quest/calcation.png')}}" alt="">
