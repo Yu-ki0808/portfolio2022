@@ -15,7 +15,7 @@
 <div class="d-flex mt-2">
     <p class="me-3">Lv:{{Auth::user()->Lv}}</p>
     <p>EXP:</p>
-    {{-- <meter  class="ms-1" value="{{Auth::user()->EXP}}" optimum="{{$max_exp->EXP *0.5}}" min="{{$min_exp->EXP}}"  low="{{intval($max_exp->EXP * 0.6)}}" high="{{intval($max_exp->EXP * 0.8)}}" max="{{$max_exp->EXP}}"style="height: 25px";></meter> --}}
+    <meter  class="ms-1" value="{{Auth::user()->EXP}}" optimum="{{$max_exp->EXP *0.5}}" min="{{$min_exp->EXP}}"  low="{{intval($max_exp->EXP * 0.6)}}" high="{{intval($max_exp->EXP * 0.8)}}" max="{{$max_exp->EXP}}"style="height: 25px";></meter>
 </div>
 <li class="nav-item dropdown user-menu">
     {{-- User menu toggler --}}
