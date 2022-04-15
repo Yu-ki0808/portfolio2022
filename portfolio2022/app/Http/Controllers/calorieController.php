@@ -43,8 +43,8 @@ class calorieController extends Controller
         }
         // カロリー計算
         if (Auth::user()->gender == 1) {
-            $basic = floor((13.397 * $weight) + (4.799 * Auth::user()->height) - (5.677 * $age) + 88.362);
-            $total = floor(((13.397 * $weight) + (4.799 * Auth::user()->height) - (5.677 * $age) + 88.362) * $level);
+            $basic = round((13.397 * $weight) + (4.799 * Auth::user()->height) - (5.677 * $age) + 88.362);
+            $total = round(((13.397 * $weight) + (4.799 * Auth::user()->height) - (5.677 * $age) + 88.362) * $level);
         } else {
             $basic = floor((9.247 * $weight) + (3.098 * Auth::user()->height) - (4.33 * $age) + 447.593) ;
             $total = floor(((9.247 * $weight) + (3.098 * Auth::user()->height) - (4.33 * $age) + 447.593) * $level);
