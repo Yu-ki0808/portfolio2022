@@ -43,8 +43,8 @@ class calorieController extends Controller
         }
         // カロリー計算
         if (Auth::user()->gender == 1) {
-            $basic = round((13.397 * $weight) + (4.799 * Auth::user()->height) - (5.677 * $age) + 88.362);
-            $total = round(((13.397 * $weight) + (4.799 * Auth::user()->height) - (5.677 * $age) + 88.362) * $level);
+            $basic = floor((13.397 * $weight) + (4.799 * Auth::user()->height) - (5.677 * $age) + 88.362);
+            $total = floor(((13.397 * $weight) + (4.799 * Auth::user()->height) - (5.677 * $age) + 88.362) * $level);
         } else {
             $basic = floor((9.247 * $weight) + (3.098 * Auth::user()->height) - (4.33 * $age) + 447.593) ;
             $total = floor(((9.247 * $weight) + (3.098 * Auth::user()->height) - (4.33 * $age) + 447.593) * $level);
@@ -53,10 +53,11 @@ class calorieController extends Controller
             $pars = ['20%','25%','55%'];
             $line= 'muscle-line';
             $muscle_calories = [
-                [round(($total +200)*0.2) ,round(($total +200)*0.2/4),],
-                [round(($total +200)*0.25), round(($total + 200) * 0.3 / 9),],
-                [round(($total +200)*0.55), round(($total + 200) * 0.5 / 4),],
+                [floor(($total +200)*0.2) ,floor(($total +200)*0.2/4),],
+                [floor(($total +200)*0.25), floor(($total + 200) * 0.3 / 9),],
+                [floor(($total +200)*0.55), floor(($total + 200) * 0.5 / 4),],
             ];
+            $total_sum =$total +200;
         }else{
             $pars = ['20%', '20%', '60%'];
             $line = 'diet-line';
@@ -65,11 +66,10 @@ class calorieController extends Controller
                 [round(($total + 200) * 0.5), round(($total + 200) * 0.3 / 9),],
                 [round(($total + 200) * 0.6), round(($total + 200) * 0.5 / 4),],
             ];
+            $total_sum = $total -200;
         }
-        $total_sum =0;
         $total_g =0;
         foreach ($muscle_calories as $muscle_calorie) {
-            $total_sum += $muscle_calorie[0];
             $total_g += $muscle_calorie[1];
         }
 
