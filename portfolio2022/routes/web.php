@@ -14,6 +14,7 @@ use App\Http\Controllers\kids_pikori\alphabetController;
 use App\Http\Controllers\kids_pikori\numberController;
 use App\Http\Controllers\kids_pikori\katakanaController;
 use App\Http\Controllers\kids_pikori\hiraganaController;
+use App\Http\Controllers\kids_pikori\contactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +69,5 @@ Route::get('/kids-pikori/katakana-random-image',[katakanaController::class, 'sho
 Route::get('/kids-pikori/hiragana',[hiraganaController::class, 'show_hiragana'])->name('kids-pikori.hiragana');
 Route::get('/kids-pikori/hiragana-random',[hiraganaController::class, 'show_hiragana_random'])->name('kids-pikori.hiragana_random');
 Route::get('/kids-pikori/hiragana-random-image',[hiraganaController::class, 'show_hiragana_random_image'])->name('kids-pikori.hiragana_random_image');
+Route::get('/kids-pikori/contact',[contactController::class, 'show'])->name('contact');
+Route::post('/kids-pikori/contact',[contactController::class, 'contact'])->name('contact');

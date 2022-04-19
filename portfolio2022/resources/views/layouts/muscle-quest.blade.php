@@ -43,7 +43,7 @@
                 @endif
             @endif
 
-          <label for="" class="login">ログイン</label>
+          <label for="" class="login">メールアドレス</label>
           <input type="text" class="mb-3" name="email"><br>
           <label for="" class="login">パスワード</label>
         <input type="password" name="password">

@@ -30,7 +30,7 @@ document.getElementById("bathu").play();
         @yield('kids-contents')
         <footer class="text-center bg-block">
                 <div class="header-menu my-3 ">
-                    <a class="btn me-3">アイデア・ご意見箱</a> <a class="btn me-3">サイトの利用方法</a>
+                    <a class="btn me-3" href="{{route('contact')}}">アイデア・ご意見箱</a> <a class="btn me-3">サイトの利用方法</a>
                     <div id="Sound"></div>
                     <div id="innerHTMLtxt"></div>
                 </div>

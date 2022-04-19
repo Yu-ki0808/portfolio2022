@@ -17,7 +17,7 @@ a{
     .sb-br{
         display: none;
     }
-    
+
 .kids-container{
     background-color: #F3F3F3;
     header{
@@ -330,5 +330,9 @@ margin-bottom:0px;
     overflow: scroll;
 }
 
-
-
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+    width: 500px;
+}
