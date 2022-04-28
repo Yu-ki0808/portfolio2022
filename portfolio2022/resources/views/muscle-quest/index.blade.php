@@ -1,15 +1,31 @@
 @extends('layouts.muscle-quest')
+@section('title', 'Muscle-quest')
 @section('content')
 
 <div class="header-menu">
     <h1 class="text-start">Muscle-quest</h1>
     <div class="header-list">
-            <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#LoginModal">
-            ログイン
-        </button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#LoginModal">ログイン </button>
         <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#RegisterModal" role="button">無料会員登録</a>
     </div>
+    <div class="sp-menu">
+        <span class="material-icons " id="open">
+            menu
+        </span>
+    </div>
+</div>
+
+<div class="overlay">
+    <span class="material-icons" id="close">close</span>
+    <nav>
+        <ul class="d-flex flex-column">
+            <a type="button" class="btn btn-primary fw-bold mb-3" data-bs-toggle="modal" data-bs-target="#LoginModal">ログイン </a>
+            <a class="btn btn-info text-white fw-bold" data-bs-toggle="modal" href="#RegisterModal" role="button">無料会員登録</a>
+
+        </ul>
+    </nav>
+
 </div>
 
 <div class="container">

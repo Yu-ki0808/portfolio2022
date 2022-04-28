@@ -1,4 +1,6 @@
 $(function () {
+    //ハンバーガーメニュー
+
 
     // modalボタンにてメニュー名登録またはメニュー登録時のエラーの場合にmodalを開いてエラーを表示
     var input = document.getElementById('error_modal_open');

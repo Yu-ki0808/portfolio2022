@@ -1,7 +1,7 @@
 @media screen and (max-width: 599px) {
 	/* 599px以下に適用されるCSS（タブレット用） */
     .header-menu{
-        display:block;
+        justify-content: space-between;
         h2{
             padding-top:4.5rem;
         }
@@ -11,6 +11,9 @@
     }
     .modal-open{
         padding-right:0 !important;
+    }
+    .sp-menu {
+        display: initial;
     }
 
     .main-title{
@@ -71,6 +74,7 @@
     .header-list{
         display: none;
     }
+
     .register-menu{
         .sign-form{
         width: 300px;
