@@ -12,7 +12,7 @@ class indexController extends Controller
             return view('kids-pikori.index');
         }
         public function show(){
-            return view('kids-pikori.contents');
+            return view('kids-pikori.contents-list');
         }
     }
 
