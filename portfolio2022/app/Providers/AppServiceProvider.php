@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         // ▼下記3行を追加
-        View::composer('*', function ($view) {
+        View::composer('muscle-quest', function ($view) {
             if(Auth::id()){
             $max_exp = level::where('Lv', Auth::user()->Lv +1)->first(['EXP']);
             $min_exp = level::where('Lv', Auth::user()->Lv )->first(['EXP']);

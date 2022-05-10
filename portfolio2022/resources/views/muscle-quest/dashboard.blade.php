@@ -1,9 +1,6 @@
 @extends('adminlte::page')
 @extends('layouts.muscle-quest.login-muscle-quest')
-
-
 @section('title', 'HOME')
-
 @section('content_header')
 <div class="contaner text-center home">
 

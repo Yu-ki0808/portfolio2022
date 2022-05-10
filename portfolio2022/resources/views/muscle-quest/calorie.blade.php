@@ -100,7 +100,7 @@
                         <h4>Protein<br>タンパク質</h4>
                     </div>
                     <div class="kcal re-kal">
-                      <p><span>{{$muscle_calories[0][1]}}g<br>{{$pars[0]}}）</span></p>
+                      <p><span>{{$muscle_calories[0][1]}}g<br>({{$pars[0]}}）</span></p>
                     </div>
                     </div>
                 <div class="border pfc-menu  align-items-center ">
@@ -108,7 +108,7 @@
                         <h4>Fat<br>脂質</h4>
                     </div>
                     <div class="kcal re-kal">
-                        <p><span>{{$muscle_calories[1][1]}}g<Br>{{$pars[1]}}）</span></p>
+                        <p><span>{{$muscle_calories[1][1]}}g<Br>({{$pars[1]}}）</span></p>
                     </div>
                 </div>
                     <div class="border pfc-menu  align-items-center">
@@ -116,7 +116,7 @@
                             <h4>Carbohydrate<br>炭水化物</h4>
                         </div>
                         <div class="kcal re-kal">
-                            <p><span>{{$muscle_calories[2][1]}}g<br>{{$pars[2]}}）</span></p>
+                            <p><span>{{$muscle_calories[2][1]}}g<br>({{$pars[2]}}）</span></p>
                         </div>
                     </div>
                     <div class="total-border pfc-menu  align-items-center">

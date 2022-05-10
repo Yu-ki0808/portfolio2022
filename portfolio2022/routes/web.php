@@ -15,6 +15,7 @@ use App\Http\Controllers\kids_pikori\numberController;
 use App\Http\Controllers\kids_pikori\katakanaController;
 use App\Http\Controllers\kids_pikori\hiraganaController;
 use App\Http\Controllers\kids_pikori\contactController;
+use App\Http\Controllers\mendan\mendanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,9 @@ Route::get('/kids-pikori/hiragana-random',[hiraganaController::class, 'show_hira
 Route::get('/kids-pikori/hiragana-random-image',[hiraganaController::class, 'show_hiragana_random_image'])->name('kids-pikori.hiragana_random_image');
 Route::get('/kids-pikori/contact',[contactController::class, 'show'])->name('contact');
 Route::post('/kids-pikori/contact',[contactController::class, 'contact'])->name('contact');
+
+// --------mendan--------
+Route::get('/mendan', [mendanController::class, 'index'])->name('mendan');
+Route::post('/mendan/register', [mendanController::class, 'store'])->name('mendan-register');
+Route::get('/mendan/home', [mendanController::class, 'home'])->name('mendan-home');
+
