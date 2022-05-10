@@ -46,7 +46,9 @@
                                 <a href="{{route('muscle-quest/index')}}" class="link text-black">
                                     <button class="btn dark">Site</button>
                                 </a>
+                                <a href="https://github.com/Yu-ki0808/portfolio2022/tree/main/portfolio2022">
                                 <button class="btn btn-outline-dark">Github</button>
+                                </a>
                             </div>
                     </div>
                 </div>
@@ -61,7 +63,9 @@
                                 <a href="{{route('kids-pikori')}}" class="link text-black">
                                     <button class="btn btn-outline-light me-5">Site</button>
                                 </a>
+                                <a href="https://github.com/Yu-ki0808/portfolio2022/tree/main/portfolio2022">
                                 <button class="btn light ">Github</button>
+                                </a>
                             </div>
                         </div>
                 <img src="{{asset('img/portfolio/oo.png')}}" alt="" class="bg-info">
